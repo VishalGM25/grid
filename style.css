@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: rgb(240, 244, 244);
+}
+.reviews{
+    height: 80vh;
+    width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+}
+.review-1{
+    background-color:hsl(263, 55%, 52%);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 10px;
+    padding: 1.2rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+.review-2{
+    background-color: hsl(217, 19%, 35%);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border-radius: 10px;
+    padding: 1.2rem 2rem;
+}
+.review-3{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 1.2rem 2rem;
+}
+.review-4{
+    background-color: hsl(219, 29%, 14%);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border-radius: 10px;
+    padding: 1.2rem 2rem;
+}
+.review-5{
+    background-color: hsl(0, 0%, 100%);
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 10px;
+    padding: 1.2rem 2rem;
+}
+.review-1 img,
+.review-2 img,
+.review-3 img,
+.review-4 img,
+.review-5 img{
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid hsl(263, 55%, 52%);
+    display: inline;
+}
+.review-1 .card,
+.review-2 .card,
+.review-4 .card{
+    color: white;
+}
+.card{
+    display: flex;
+}
+.card-body h3{
+    font-size: 0.85rem;
+}
+.card-body span{
+    color: hsl(0, 0%, 81%);;
+    font-size: 0.7rem;
+}
+.review-1 .review-title,
+.review-2 .review-title,
+.review-4 .review-title{
+    color:hsl(210, 46%, 95%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 0;
+}
+.review-1 .review-desc,
+.review-2 .review-desc,
+.review-4 .review-desc{
+    color: hsl(0, 0%, 81%);
+    font-size: 0.85rem;
+    text-align: justify;
+    padding-top: 10px;
+}
+.review-5 .review-title,
+.review-3 .review-title{
+    color:  hsl(219, 29%, 14%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.review-5 .review-desc,
+.review-3 .review-desc{
+    color:  hsl(219, 29%, 14%);
+    font-size: 0.85rem;
+    opacity: 70%;
+    font-weight: 500;
+    text-align: justify;
+    padding-top: 10px;
+}
+.review-1 .quotation{ 
+    width: 104px;
+    height: 102px;
+    position: absolute;
+    right: 80px;
+    top: 0;
+    opacity: 70%;
+    z-index: -1;
+}
+@media screen and (max-width:400px) {
+    .reviews{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 250px 250px 250px;
+        margin: 0;
+    }
+    .review-1{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 500px;
+    }
+    .review-2{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .review-3{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .review-4{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .review-5{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 7;
+        grid-row-end: 9;
+    }
+    .review-1 img,
+    .review-2 img,
+    .review-3 img,
+    .review-4 img,
+    .review-5 img{
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid hsl(263, 55%, 52%);
+    display: inline;
+}
+    .review-1 .review-title,
+    .review-2 .review-title,
+    .review-4 .review-title,
+    .review-3 .review-title,
+    .review-5 .review-title{
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .review-1 .review-desc,
+    .review-2 .review-desc,
+    .review-4 .review-desc,
+    .review-3 .review-desc,
+    .review-5 .review-desc{
+        font-size: 1.5rem;
+        text-align: justify;
+        padding-top: 10px;
+    }
+    .card{
+        margin-top: 20px;
+    }
+    .card-body h3{
+        font-size: 1rem;
+    }
+    .card-body span{
+        color: hsl(0, 0%, 81%);;
+        font-size: 1rem;
+    }
+  }
